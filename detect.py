@@ -45,3 +45,23 @@ class Detect(BaseDetect):
               sms_information: Include Phone number and api of user
               cuda: For run with (CPU/GPU)
           """
+
+    def __repr__(self):
+        return f"{self.__class__.__name__!r}({self.__dict__!r})"
+
+    def processing(self):
+        """Ask network to use specific computation backend where it supported.
+
+        Return:
+            net, processing with (CPU) or cuda(GPU)
+        """
+        net = self._read_yolov3_files()
+        # Use GPU(hight fps)
+        if self.cuda == "GPU":
+            net.setPreferableBackend(cv.dnn.DNN_BACKEND_CUDA)
+            net.setPreferableTarget(cv.dnn.DNN_TARGET_CUDA)
+        # use CPU(low fps)
+        else:
+            net.setPreferableBackend(cv.dnn.DNN_BACKEND_OPENCV)
+            net.setPreferableTarget(cv.dnn.DNN_TARGET_CPU)
+        return net
