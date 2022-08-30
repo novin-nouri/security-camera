@@ -65,3 +65,32 @@ class Detect(BaseDetect):
             net.setPreferableBackend(cv.dnn.DNN_BACKEND_OPENCV)
             net.setPreferableTarget(cv.dnn.DNN_TARGET_CPU)
         return net
+
+    def _read_yolov3_files(self):
+        """Read (coco.names), (yolov3.cfg) and (yolov3_4.weights)
+
+        Return:
+            Network object that ready to do forward, throw an exception in
+            failure cases.
+        """
+        # Read 80 class names (like dog, car, ...)
+        class_files = r"files\yolov3_files\coco.names"
+        with open(class_files, "r") as f:
+            self.classes_names = f.read().rstrip("\n").split("\n")
+        # yolo cfg-weights files
+        model_configration = r"files\yolov3_files\yolov3.cfg"
+        model_weights = r"files\yolov3_files\yolov3_4.weights"
+        # reads a network model stored in Darknet model files
+        net = self._network_model(model_configration, model_weights)
+        return net
+
+    @staticmethod
+    def _network_model(cfg, weights):
+        """Reads a network model stored in Darknet model files.
+
+        Return:
+            Network object that ready to do forward, throw an exception in
+            failure cases.
+        """
+        net = cv.dnn.readNetFromDarknet(cfg, weights)
+        return net
