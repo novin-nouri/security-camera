@@ -24,3 +24,20 @@ class MainScreen:
                 root window and manages all the other components of the 
                 tkinter application.
         """
+
+    def __repr__(self):
+        return f"{self.__class__.__name__!r}({self.__dict__!r})"
+
+    def add_logo(self):
+        """Add logo for app"""
+        logo = PhotoImage(file=r"files\images\security_camera_icon.png")
+        self.master.iconphoto(False, logo)
+
+    @staticmethod
+    def add_image():
+        """Add image in main screen"""
+        image = Image.open(r"files\images\security_camera_image.png")
+        img = ImageTk.PhotoImage(image)
+        lmain2 = Label(image=img, borderwidth=0, border=0)
+        lmain2.image = img
+        lmain2.place(x=264, y=20)
