@@ -29,7 +29,8 @@ we used [opencv](https://opencv.org/) library in this project and [YOLOv3](https
 <br />and this program can be run with **CPU** or **GPU**, we recommend you **GPU**(because it has high speed).
 
 ### How to use it
-1. first download `yolov3_4.weights` from this [link](https://pjreddie.com/media/files/yolov3.weights).
+1. first download `yolov3_4.weights` from this [link](https://pjreddie.com/media/files/yolov3.weights), and put it in the following **folder**:
+<br />`security-camera\files\yolov3_files`
 
 2. watch this [video](https://www.youtube.com/watch?v=tjXkW0-4gME&list=WL&index=17) to enable **GPU**.
 
