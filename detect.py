@@ -146,7 +146,7 @@ class Detect(BaseDetect):
                 elif self.first_detect_time != 0:
                     current_time = time.time()
                     diff_time = current_time - self.first_detect_time
-                    if diff_time >= 3:
+                    if diff_time >= 5:
                         self.authorised = True
                         self.first_detect_time = time.time()
                         return True
@@ -158,7 +158,7 @@ class Detect(BaseDetect):
             if detect_qrcode_in_frame:
                 current_time = time.time()
                 diff_time = int(current_time - self.first_detect_time)
-                if diff_time >= 3:
+                if diff_time >= 5:
                     self.authorised = False
                     self.first_detect_time = time.time()
                     return False
