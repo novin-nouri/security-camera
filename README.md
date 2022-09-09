@@ -48,5 +48,5 @@ to create your own **QR Code** and select the *text* option.
 
 ### Screenshot
 <p align="center">
-    <img src="files/images/screenshot.png" alt="second" width="800" height="497" align="center"/>
+    <img src="files/images/screenshot.png" alt="second" width="800" height="497" />
 </p>
