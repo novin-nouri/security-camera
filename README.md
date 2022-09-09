@@ -45,3 +45,8 @@ to create your own **QR Code** and select the *text* option.
 
 6. finally, open **cmd**(Command Prompt) in the **security-camera folder** and execute the following command:
 <br />`python main.py` 
+
+### Screenshot
+<p align="center">
+    <img src="files/images/screenshot.png" alt="second" width="800" height="497" align="center"/>
+</p>
