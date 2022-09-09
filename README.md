@@ -28,7 +28,7 @@ the **objects** it can protect, includes:
 we used [opencv](https://opencv.org/) library in this project and [YOLOv3](https://pjreddie.com/darknet/yolo/) to detect objects and [Tkinter](https://docs.python.org/3/library/tkinter.html) for GUI(graphical user interface).
 <br />and this program can be run with **CPU** or **GPU**, we recommend you **GPU**(because it has high speed).
 
-### How to use it
+## How to use it
 1. first download `yolov3_4.weights` from this [link](https://pjreddie.com/media/files/yolov3.weights), and put it in the following **folder**:
 <br />`security-camera\files\yolov3_files`
 
@@ -46,7 +46,7 @@ to create your own **QR Code** and select the *text* option.
 6. finally, open **cmd**(Command Prompt) in the **security-camera folder** and execute the following command:
 <br />`python main.py` 
 
-### Screenshot
+## Screenshot
 <p align="center">
     <img src="files/images/screenshot.png" alt="second" width="800" height="497" />
 </p>
