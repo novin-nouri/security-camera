@@ -36,8 +36,8 @@ class QrCode:
                 cv.rectangle(frame,
                              pt1=(rec[0], rec[1]),
                              pt2=(rec[0] + rec[2], rec[1] + rec[3]),
-                             color=(0, 255, 0),
-                             thickness=3)
+                             color=(0, 0, 255),
+                             thickness=2)
                 authorised = self._authorised(frame, rec, txt)
                 return authorised
 
@@ -82,7 +82,7 @@ class QrCode:
                        org=(rec[0], rec[1] - 10),
                        fontFace=cv.FONT_HERSHEY_SIMPLEX,
                        fontScale=0.7,
-                       color=(0, 255, 0),
+                       color=(0, 0, 255),
                        thickness=2)
             return True
         else:
