@@ -52,4 +52,4 @@ to create your own **QR Code** and select the *text* option.
 </p>
 
 ## Demo
-https://files.fm/f/jnfj8tmp4
+https://user-images.githubusercontent.com/63948831/192821861-5997b80e-f858-4de4-af38-df254614ac26.mp4
